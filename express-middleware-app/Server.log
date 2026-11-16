@@ -1,0 +1,12 @@
+GET / 404 - 40ms
+GET /favicon.ico 404 - 2ms
+GET /api/v1/patients 200 - 2ms
+GET /api/v1/patients/1 200 - 3ms
+GET /api/v1/patients?ward=ICU 200 - 151ms
+POST /api/v1/patients 201 - 15ms
+GET /api/v1/patients 200 - 1ms
+GET /api/v1/patients/1 200 - 1ms
+GET /api/v1/patients?ward=ICU 200 - 1ms
+PUT /api/v1/patients/1 200 - 1ms
+DELETE /api/v1/patients/1 200 - 1ms
+POST /api/v1/patients 400 - 1ms

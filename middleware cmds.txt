@@ -1,0 +1,18 @@
+Microsoft Windows [Version 10.0.19045.6466]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\ACER>curl -X POST http://localhost:6500/api/v1/patients -H "Content-Type:application/json" -d "{\"name\":\"Raj\",\"gender\":\"Male\",\"ward\":\"ICU\"}"
+{"message":"Patient added successfully","patient":{"name":"Raj","gender":"Male","ward":"ICU"}}
+C:\Users\ACER>curl http://localhost:6500/api/v1/patients
+All patients fetched successfully
+C:\Users\ACER>curl http://localhost:6500/api/v1/patients/1
+Patient with id 1 fetched successfully
+C:\Users\ACER>curl http://localhost:6500/api/v1/patients?ward="ICU"
+Patients of ICU ward fetched successfully
+C:\Users\ACER>curl -X PUT http://localhost:6500/api/v1/patients/1 -H "Content-Type:application/json" -d "{\"name\":\"Raj updated\",\"gender\":\"Male\",\"ward\":\"General\"}"
+Patient with id 1 updated successfully
+C:\Users\ACER>curl -X DELETE http://localhost:6500/api/v1/patients/1
+Patient with id 1 deleted successfully
+C:\Users\ACER>curl -X POST http://localhost:6500/api/v1/patients -H "Content-Type:application/json" -d "{\"name\":\"Raj\"}"
+Patient details are missing
+C:\Users\ACER>
